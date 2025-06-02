@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="curency_converter.css">
+</head>
+<header>
+    <div class="navbar">
+        <div class="logo"><a href="homepage.html">Economix</a></div>
+        <ul class="links">
+            <li><a href="./homepage.html">Home</a></li> 
+            <li><a href="fd_calculator.html">FD Calculator</a></li>
+            <li><a href="tax_calc.html">Tax Calculator</a></li>
+            <li><a href="curency_converter.html">Currency Converter</a></li>
+            <li><a href="retire.html">Retirement Planner</a></li>
+            <li><a href="map.html">Unemployment</a></li>
+            <li><a href="event.html">Event Calculator</a></li>
+        </ul>
+
+        <div class="toggle_btn">
+            <i class='bx bx-menu'></i>
+        </div>
+    </div>
+
+    
+    <ul class="dropdown_menu">
+        <li><a href="./homepage.html">Home</a></li> 
+        <li><a href="fd_calculator.html">FD Calculator</a></li>
+        <li><a href="tax_calc.html">Tax Calculator</a></li>
+        <li><a href="curency_converter.html">Currency Converter</a></li>
+        <li><a href="retire.html">Retirement Planner</a></li>
+        <li><a href="map.html">Unemployment</a></li>
+        <li><a href="map.html">Event Calculator</a></li>
+    </ul>
+</header>
+<body>
+    <div class="box">
+
+        <div class="container">
+        <h2 style="font-size: 1.7rem; color: #13787f;">Welcome to Currency Converter</h2>
+        <div class="converter">
+            <div class="input_text">
+                <span>Enter your Amount</span>
+                <div class="input_box">
+                    <img src="rupee.svg" alt="" id="cur_logo">
+                    <input type="text" id="amount_input">
+                </div>
+            </div>
+            <div class="select_cur">
+                <p>From</p>
+                <div class="first_select">
+                    <i class="from_svg"><img src="" alt="" height="24" width="24"></i>
+                    <select id="from_currency" class="first_cur_selector">
+                        <option value="Rupee">Rupee</option>
+                        <option value="Dollar">Dollar</option>
+                        <option value="Euro">Euro</option>
+                        <option value="Rubbel">Rubbel</option>
+                        <option value="Pounds">Pounds</option>
+                    </select>
+                </div>
+            </div>
+            <i>
+                <img src="forward.svg" alt="" >
+            </i>
+            <div class="select_cur2">
+                <p>To</p>
+                <div class="second_select">
+                    <i class="to_svg"><img src="india.svg" alt=""></i>
+                    <select id="to_currency">
+                        <option value="Rupee"><i><img src="" alt=""></i>Rupee</option>
+                        <option value="Dollar">Dollar</option>
+                        <option value="Euro">Euro</option>
+                        <option value="Rubbel">Rubbel</option>
+                        <option value="Pounds">Pounds</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="button_container">
+            <h3 class="result"></h3>
+            <button class="button convert_button">Convert</button>
+            <button class="button reset">Reset</button>
+        </div>
+    </div>
+    <footer>&copy; Economix.com || ALL Rights Reserved</footer>
+    <script src="curency_converter.js"></script>
+    
+</body>
+
+</html>

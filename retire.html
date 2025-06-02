@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retirement Calculator</title>
+    <link rel="stylesheet" href="retire.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="homepage.html">Economix</a></div>
+            <ul class="links">
+                <li><a href="./homepage.html">Home</a></li> 
+                <li><a href="fd_calculator.html">FD Calculator</a></li>
+                <li><a href="tax_calc.html">Tax Calculator</a></li>
+                <li><a href="curency_converter.html">Currency Converter</a></li>
+                <li><a href="retire.html">Retirement Planner</a></li>
+                <li><a href="map.html">Unemployment</a></li>
+            <li><a href="event.html">Event Calculator</a></li>
+            </ul>
+            <!-- <a href="#" class="action_btn">Get Started</a> -->
+            <div class="toggle_btn">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+
+        
+        <ul class="dropdown_menu">
+            <li><a href="./homepage.html">Home</a></li> 
+            <li><a href="fd_calculator.html">FD Calculator</a></li>
+            <li><a href="tax_calc.html">Tax Calculator</a></li>
+            <li><a href="curency_converter.html">Currency Converter</a></li>
+            <li><a href="retire.html">Retirement Planner</a></li>
+            <li><a href="map.html">Unemployment</a></li>
+            <li><a href="event.html">Event Calculator</a></li>
+        </ul>
+    </header>
+    <div class="container">
+        <form id="retirement-form">
+            <h1 class="heading">Advanced Retirement Calculator</h1>
+            
+            <div class="form-group">
+                <label for="current-savings">Current Savings (₹):</label>
+                <input type="text" id="current-savings" placeholder="Enter your current savings">
+            </div>
+            <div class="form-group">
+                <label for="current-age">Current Age:</label>
+                <input type="text" id="current-age" placeholder="Enter your current age">
+            </div>
+            <div class="form-group">
+                <label for="retirement-age">Retirement Age:</label>
+                <input type="text" id="retirement-age" placeholder="Enter desired retirement age">
+            </div>
+            <div class="form-group">
+                <label for="retirement-duration">Years After Retirement:</label>
+                <input type="text" id="retirement-duration" placeholder="Enter expected years">
+            </div>
+            <div class="form-group">
+                <label for="monthly-expenses">Monthly Expenses (₹):</label>
+                <input type="text" id="monthly-expenses" placeholder="Enter estimated monthly expenses">
+            </div>
+            <div class="form-group">
+                <label for="inflation-rate">Inflation Rate (%):</label>
+                <input type="range" id="inflation-rate" min="0" max="10" step="0.1" value="3">
+                <span id="inflation-rate-display">3%</span>
+            </div>
+            <div class="form-group">
+                <label for="return-rate">Investment Return Rate (%):</label>
+                <input type="range" id="return-rate" min="0" max="15" step="0.1" value="7">
+                <span id="return-rate-display">7%</span>
+            </div>
+            <button type="submit">Calculate</button>
+            <button id="reset">Reset</button>
+        </form>
+        <div class="graph">
+
+            <div id="results">
+                <p id="monthly-contribution">Monthly Contribution: ₹0</p>
+                <p id="total-savings">Total Savings by Retirement: ₹0</p>
+                <p id="savings-progress">Savings Goal Progress: 0%</p>
+                <div id="goal-progress-bar">
+                    <div id="goal-progress"></div>
+                </div>
+            </div>
+            <canvas height="390" width="600" id="savingsChart"></canvas>
+            <!-- <canvas id="timelineChart"></canvas> -->
+        </div>
+    </div>
+    <script src="retire.js"></script>
+    
+    <footer>
+        <p>&copy; Economix.com || ALL Rights Reserved</p>
+    </footer>
+</body>
+</html>

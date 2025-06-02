@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page Devpost</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="paarent">
+        <div class="container" id="main">
+            <div class="hero">
+
+                <div class="sign-up">
+                    <form action="/signup" method="post">
+                        <h1>Create Account</h1>
+                        <div class="social-container">
+                            <a href="#" class="social"><i class='bx bxl-google'></i></a>
+                            <a href="#" class="social"><i class='bx bxl-facebook'></i></a>
+                            <a href="#" class="social"><i class='bx bxl-linkedin'></i></a>
+                        </div>
+                        <p>Or use your email for registration</p>
+                        <input type="text" name="name" placeholder="Name"  class="one_input">
+                        <input type="email" name="email" placeholder="Email" class="second_input">
+                        <input type="password" name="password" placeholder="Password" class="third_input">
+                        <input type="submit">
+                    </form>
+                </div>
+                <div class="sign-in">
+                <form action="/signin" method="post">
+                    <h1>Sign In</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class='bx bxl-google'></i></a>
+                        <a href="#" class="social"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="social"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                    <p>Or use your account</p>
+                    <input type="email" name="email" placeholder="use admin"  class="email_class">
+                    <input type="password" name="password" placeholder="use admin"  class="pass_class">
+                    <a href="#" class="forgot_pass">Forgot your password?</a>
+                    <a href="phone_signup.html" style="margin: 0;" class="phone_signup">sign-up</a>
+                    <input type="submit" class="btn-signin">
+                </div>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-left">
+                        <h1>Economix</h1>
+                        <p>To keep connected with us, please login with your personal information.</p>
+                        <button id="signin">Sign In</button>
+                    </div>
+                    <div class="overlay-right">
+                        <h1>Economix</h1>
+                        <p>Enter your personal details and start your journey with us.</p>
+                        <button id="signup">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        const signupButton = document.getElementById('signup');
+        const signinButton = document.getElementById('signin');
+        const main = document.getElementById('main');
+
+        signupButton.addEventListener('click', () => {
+            main.classList.add("right-panel-active");
+        });
+
+        signinButton.addEventListener('click', () => {
+            main.classList.remove("right-panel-active");
+        });
+
+        // document.querySelector('.btn-signin').addEventListener('click', () => {
+        //     let email = document.querySelector('.email_class').value
+        //     let password = document.querySelector('.pass_class').value
+        //     if (email === "admin" && password === "admin") {
+        //         location.href = "./homepage.html"
+        //     } else {
+        //         alert("Wrong password")
+        //     }
+        // })
+
+        //   const confirmPassword = document.getElementById('confirm-password').value;
+    document.querySelector('.btn-signup').addEventListener("click", (event) => {
+    // Prevent default form submission
+    event.preventDefault();
+
+    let usernamea = document.querySelector('.one_input').value;
+    let emaila = document.querySelector('.second_input').value;
+    let passworda = document.querySelector('.third_input').value;
+
+    // Optional: You can add checks for empty fields
+    if (!usernamea || !emaila || !passworda) {
+        alert('All fields are required!');
+        return;
+    }else{
+        alert('Registration Successful!');
+        // Redirect to the homepage
+        location.href = "./homepage.html"; 
+
+    }
+
+    const maxWidthMatch = window.matchMedia("(max-width: 500px) and (min-width: 300px)");
+
+    if (maxWidthMatch.matches) {
+    location.href = "./phone_signup.html"; // Redirect to mobile-specific signup page
+    }
+});
+
+    </script>
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>

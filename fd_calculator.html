@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FD Calculator</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="homepage.html">Economix</a></div>
+            <ul class="links">
+                <li><a href="./homepage.html">Home</a></li> 
+                <li><a href="fd_calculator.html">FD Calculator</a></li>
+                <li><a href="tax_calc.html">Tax Calculator</a></li>
+                <li><a href="curency_converter.html">Currency Converter</a></li>
+                <li><a href="retire.html">Retirement Planner</a></li>
+                <li><a href="map.html">Unemployment</a></li>
+                <li><a href="event.html">Event Calculator</a></li>
+            </ul>
+            <!-- <a href="#" class="action_btn">Get Started</a> -->
+            <div class="toggle_btn">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+
+        
+        <ul class="dropdown_menu">
+            <li><a href="./homepage.html">Home</a></li> 
+            <li><a href="fd_calculator.html">FD Calculator</a></li>
+            <li><a href="tax_calc.html">Tax Calculator</a></li>
+            <li><a href="curency_converter.html">Currency Converter</a></li>
+            <li><a href="retire.html">Retirement Planner</a></li>
+            <li><a href="map.html">Unemployment</a></li>
+            <li><a href="event.html">Event Calculator</a></li>
+        </ul>
+    </header>
+    <h1>Welcome to FD Calculator</h1>
+
+    <div class="bodytext">
+        <div class="container">
+            <div class="container1">
+                <div class="inv-div">
+                    <div>
+                        <h2>Enter your Invested Amount</h2>
+                    </div>
+                    <div><input type="text" class="invest"></div>
+                </div>
+                <div class="inv-div">
+                    <div>
+                        <h2>Enter your Interest Rate</h2>
+                    </div>
+                    <div><input type="text" class="interest"></div>
+                </div>
+                <div class="inv-div">
+                    <div>
+                        <h2>Enter the Time of Investment</h2>
+                    </div>
+                    <div><input type="text" class="time"></div>
+                </div>
+                <div class="button_div">
+                    <button type="button" class="button">Calculate</button>
+                    <button type="button" class="reset">Reset</button>
+                </div>
+            </div>
+            <div class="container2">
+                <div class="inv-div">
+                    <div>
+                        <h3>Your Invested Amount is</h3>
+                    </div>
+                    <div><input type="text" class="investedamt" readonly></div>
+                </div>
+                <div class="inv-div">
+                    <div>
+                        <h3>Your Estimated Return is</h3>
+                    </div>
+                    <div><input type="text" class="estdrnt" readonly></div>
+                </div>
+                <div class="inv-div">
+                    <div>
+                        <h3>Your Total Return is</h3>
+                    </div>
+                    <div><input type="text" class="totval" readonly></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="pie">
+            <h2>Your Investment Breakdown</h2>
+            <div><canvas id="investmentChart" width="400" height="400"></canvas></div>
+        </div>
+    </div>
+
+    <div class="inv_parent">
+
+
+</div>
+    <script src="./fd_calculator.js"></script>
+
+    <footer>&copy; Economix.com || ALL Rights Reserved</footer>
+    
+</body>
+<link rel="stylesheet" href="./fd_calculator.css">
+
+</html>

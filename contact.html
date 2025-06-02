@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title> 
+    <style>
+        body {
+            font-family: "Popins", sans-serif;
+            background: linear-gradient(135deg, #ffffff, #bdc3c7);
+            margin: 0;
+            /* padding: 20px; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        a{
+            text-decoration: none;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            max-width: 1200px;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .card {
+            perspective: 1500px;
+            position: relative;
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+            transform-origin: center center;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+        }
+
+        .card:hover {
+            transform: translateY(-15px) rotateX(10deg) rotateY(-10deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            transform-style: preserve-3d;
+            transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border-radius: 15px;
+        }
+
+        .card-inner.is-flipped {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #fff;
+            transition: transform 0.3s ease-in-out;
+            text-align: center;
+        }
+
+        .card-front img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .card-front h3, .card-back h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-front p, .card-back p {
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+        }
+        .card:nth-child(1) .card-front {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+
+        .card:nth-child(1) .card-back {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+
+        .card:nth-child(2) .card-front {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+
+        .card:nth-child(2) .card-back {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+        }
+
+        .card:nth-child(3) .card-front {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+        }
+
+        .card:nth-child(3) .card-back {
+            background: linear-gradient(135deg, #d35400, #e74c3c);
+        }
+
+        .card:nth-child(4) .card-front {
+            background: linear-gradient(135deg, #1abc9c, #16a085);
+        }
+
+        .card:nth-child(4) .card-back {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+        }
+
+        .card:nth-child(5) .card-front {
+            background: linear-gradient(135deg, #34495e, #2c3e50);
+        }
+
+        .card:nth-child(5) .card-back {
+            background: linear-gradient(135deg, #2c3e50, #7f8c8d);
+        }
+
+        .card:nth-child(6) .card-front {
+            background: linear-gradient(135deg, #8e44ad, #9b59b6);
+        }
+
+        .card:nth-child(6) .card-back {
+            background: linear-gradient(135deg, #9b59b6, #34495e);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card.clicked {
+            transform: translateX(-10px) rotateY(10deg);
+        }
+
+        .card-front img:hover {
+            transform: scale(1.1);
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .card:hover {
+            animation: float 2s ease-in-out infinite;
+        }
+
+    </style>
+</head>
+<header><a href="homepage.html"><h1>Economix</h1></a>
+</header>
+<body>
+
+<div class="container">
+    <!-- Card 1 -->
+    <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="arman1-modified.png" alt="">
+                <h3>Md.Arman Ali</h3>
+                <p>FullStack Developer</p>
+            </div>
+            <div class="card-back">
+                <h3>Md.Arman Ali</h3>
+                <p>B.Tech in IT(1st)<br>Specialized in MERN Stack Development<br>Available for Freelance</p>  <p>Email: <a href="arman992024@gmail.com">arman992024@gmail.com</a></p>
+                <p>Phone: <a href="tel:+91 98312 97277">+91 1234567890</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="rajdeb img.jpg" alt="Person 2">
+                <h3>Rajdeb Mukhopadhyay</h3>
+                <p>Frontend Developer</p>
+            </div>
+            <div class="card-back">
+                <h3>Rajdeb Mukhopadhyay</h3>
+                <p>B.Tech in CSE(1st)<br>Expert in React & Angular<br>Loves Design Challenges</p> <p>Email: <a href="rajdebmukhopadhyay15@gmail.com">rajdebmukhopadhyay15@gmail.com</a></p>
+                <p>Phone: <a href="tel:+91 8250952187">+91 1234567890</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="rhitam img-modified.png" alt="Person 3">
+                <h3>Rhitam Biswas</h3>
+                <p>UI/UX Designer</p>
+            </div>
+            <div class="card-back">
+                <h3>Rhitam Biswas</h3>
+                <p> B.Tech in IT(1st)<br>Masters in Visual Design<br>Proficient in Figma & Adobe XD<br>Passionate about User Experience</p> <p>Email: <a href="mailto:michaellee@example.com">biswas.rhitam.1@gmail.com</a></p>
+                <p>Phone: <a href="tel:+91 87773 88967">+91 1234567890</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="compass img.jpg" alt="Person 4">
+                <h3>Ankita Kundu</h3>
+                <p>Project Manager</p>
+            </div>
+            <div class="card-back">
+                <h3>Ankita Kundu</h3>
+                <p> B.Tech in IT(1st)<br>Expert in Project Management<br>Efficient in Agile Methodology<br>Experienced in Multitasking</p><p>Email: <a href="ankita.2020.kundu@gmail.com">ankita.2020.kundu@gmail.com</a></p>
+                <p>Phone: <a href="tel:+91 7439633240">+91 1234567890</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Card 5 -->
+    <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="arijit img.jpg" alt="Person 5">
+                <h3>Arijit Deb</h3>
+                <p>Content Strategist</p>
+            </div>
+            <div class="card-back">
+                <h3>Arijit Deb</h3>
+                <p>B.Tech in IT(1st)<br>Masters in English<br>Experienced in Content Planning<br>SEO Specialist</p> <p>Email: <a href="findingsherlock01@gmail.com">findingsherlock01@gmail.com</a></p>
+                <p>Phone: <a href="tel:+91 98756 91244">+91 1234567890</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Card 6 -->
+    <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="anushka img.jpg" alt="Person 6">
+                <h3>Anushka Ghosh</h3>
+                <p>Customer Support</p>
+            </div>
+            <div class="card-back">
+                <h3>Anushka Ghosh</h3>
+                <p>B.Tech in CSE(1st)<br>Expert in Communication<br>Fluent in English and Hindi<br>Excellent Problem-Solving Skills</p><p>Email: <a href="anushkaatanu20@gmail.com">anushkaatanu20@gmail.com</a></p>
+                <p>Phone: <a href="tel:+91 9434185042">+91 1234567890</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function flipCard(card) {
+        const cardInner = card.querySelector('.card-inner');
+        cardInner.classList.toggle('is-flipped');
+        card.classList.add('clicked');
+        setTimeout(() => {
+            card.classList.remove('clicked');
+        }, 500);
+    }
+</script>
+
+
+<footer>
+    <p>&copy; Economix.com || ALL Rights Reserved</p>
+</footer> 
+
+</body>
+</html>

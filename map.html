@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unemployment Rate Tracker - India</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="map.css">
+    <style>
+        @media (max-width:2500px) and (min-width:550px){
+            #map { height: 500px; width: 500px; }
+        }
+        /* #unemploymentChart { height: 0%; width: 0%; } */
+        select {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<header>
+    <div class="navbar">
+        <div class="logo"><a href="homepage.html">Economix</a></div>
+        <ul class="links">
+            <li><a href="./homepage.html">Home</a></li> 
+            <li><a href="fd_calculator.html">FD Calculator</a></li>
+            <li><a href="tax_calc.html">Tax Calculator</a></li>
+            <li><a href="curency_converter.html">Currency Converter</a></li>
+            <li><a href="retire.html">Retirement Planner</a></li>
+            <li><a href="map.html">Unemployment</a></li>
+            <li><a href="event.html">Event Calculator</a></li>
+        </ul>
+        <!-- <a href="#" class="action_btn">Get Started</a> -->
+        <div class="toggle_btn">
+            <i class='bx bx-menu'></i>
+        </div>
+    </div>
+
+    
+    <ul class="dropdown_menu">
+        <li><a href="./homepage.html">Home</a></li> 
+        <li><a href="fd_calculator.html">FD Calculator</a></li>
+        <li><a href="tax_calc.html">Tax Calculator</a></li>
+        <li><a href="curency_converter.html">Currency Converter</a></li>
+        <li><a href="retire.html">Retirement Planner</a></li>
+        <li><a href="map.html">Unemployment</a></li>
+        <li><a href="event.html">Event Calculator</a></li>
+    </ul>
+</header>
+<body>
+    <div class="container">
+        <h1>Unemployment Rate Tracker - India</h1>
+        <select id="stateSelect">
+            <option value="">Select a State</option>
+            <!-- Dynamically populated states -->
+        </select>
+        <div class="container2">
+
+            <div id="map1">
+                <div id="map"></div>
+            </div>
+            <div class="graph"><canvas id="unemploymentChart"></canvas></div>
+        </div>
+        
+    </div>
+    <footer>&copy; Economix.com || ALL Rights Reserved</footer>
+    <script src="map.js"></script>
+
+    
+</body>
+</html>

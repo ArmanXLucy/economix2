@@ -1,0 +1,84 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+    background-image: linear-gradient(to right, rgb(166, 166, 182), rgb(102, 106, 136));
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+main {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    color: #004080;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.about-us, .our-mission, .why-choose-us, .Join-Our-Journey{
+    margin-bottom: 40px;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-us:hover, .our-mission:hover, .why-choose-us:hover, .Join-Our-Journey:hover{
+    transform: translateY(-5px);
+}
+
+.about-us p, .our-mission p, .why-choose-us ul, .Join-Our-Journey{
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+ul li strong {
+    color: #004080;
+}
+
+footer {
+    background: #37028de5;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}

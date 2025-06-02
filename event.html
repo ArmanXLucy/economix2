@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Impact Calculator</title>
+    <link rel="stylesheet" href="event.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<header>
+    <div class="navbar">
+        <div class="logo"><a href="homepage.html">Economix</a></div>
+        <ul class="links">
+            <li><a href="./homepage.html">Home</a></li> 
+            <li><a href="fd_calculator.html">FD Calculator</a></li>
+            <li><a href="tax_calc.html">Tax Calculator</a></li>
+            <li><a href="curency_converter.html">Currency Converter</a></li>
+            <li><a href="retire.html">Retirement Planner</a></li>
+            <li><a href="map.html">Unemployment</a></li>
+            <li><a href="event.html">Event Calculator</a></li>
+        </ul>
+        <!-- <a href="#" class="action_btn">Get Started</a> -->
+        <div class="toggle_btn">
+            <i class='bx bx-menu'></i>
+        </div>
+    </div>
+
+    
+    <ul class="dropdown_menu">
+        <li><a href="./homepage.html">Home</a></li> 
+        <li><a href="fd_calculator.html">FD Calculator</a></li>
+        <li><a href="tax_calc.html">Tax Calculator</a></li>
+        <li><a href="curency_converter.html">Currency Converter</a></li>
+        <li><a href="retire.html">Retirement Planner</a></li>
+        <li><a href="map.html">Unemployment</a></li>
+        <li><a href="event.html">Event Calculator</a></li>
+    </ul>
+</header>
+<body>
+
+    <div class="calculator">
+        <div class="container">
+            <h1>Event Impact Calculator</h1>
+            <form id="impact-form">
+                <label for="attendees">Number of Attendees:</label>
+                <input type="number" id="attendees" placeholder="Enter attendees count" required>
+                
+                <label for="ticket-price">Ticket Price (per attendee):</label>
+                <input type="number" id="ticket-price" placeholder="Enter ticket price" required>
+                
+                <label for="sponsorship">Sponsorship Revenue:</label>
+                <input type="number" id="sponsorship" placeholder="Enter sponsorship revenue" required>
+                
+                <label for="expenses">Total Expenses:</label>
+                <input type="number" id="expenses" placeholder="Enter total expenses" required>
+                
+                <button type="button" id="calculate">Calculate</button>
+                <button type="button" id="reset">Reset</button>
+            </form>
+            <div id="result"></div>
+        </div>
+        <div class="container2">
+            <div class="graph">
+                <canvas id="impactChart" width="550" height="450"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="event.js"></script>
+    <footer>
+        <p style="text-align: center; color: white;">&copy; Economix.com || ALL Rights Reserved</p>
+    </footer>
+</body>
+</html>

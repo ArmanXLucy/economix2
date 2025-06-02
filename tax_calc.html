@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Tax Calculator</title>
+    <link rel="stylesheet" href="tax_calc.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="homepage.html">Economix</a></div>
+            <ul class="links">
+                <li><a href="./homepage.html">Home</a></li> 
+                <li><a href="fd_calculator.html">FD Calculator</a></li>
+                <li><a href="tax_calc.html">Tax Calculator</a></li>
+                <li><a href="curency_converter.html">Currency Converter</a></li>
+                <li><a href="retire.html">Retirement Planner</a></li>
+                <li><a href="map.html">Unemployment</a></li>
+                <li><a href="event.html">Event Calculator</a></li>
+            </ul>
+            <!-- <a href="#" class="action_btn">Get Started</a> -->
+            <div class="toggle_btn">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+
+        
+        <ul class="dropdown_menu">
+            <li><a href="./homepage.html">Home</a></li> 
+            <li><a href="fd_calculator.html">FD Calculator</a></li>
+            <li><a href="tax_calc.html">Tax Calculator</a></li>
+            <li><a href="curency_converter.html">Currency Converter</a></li>
+            <li><a href="retire.html">Retirement Planner</a></li>
+            <li><a href="map.html">Unemployment</a></li>
+            <li><a href="event.html">Event Calculator</a></li>
+        </ul>
+    </header>
+    <div class="parent">
+        <div class="container">
+            <h1>Advanced Tax Calculator</h1>
+            <div class="inputs">
+                
+                <label for="income">Income:</label>
+                <input type="number" id="income" placeholder="Enter your annual income">
+
+                <label for="deductions">Deductions:</label>
+                <input type="number" id="deductions" placeholder="Enter total deductions">
+
+                <label for="investments">Investments:</label>
+                <input type="number" id="investments" placeholder="Enter total investments">
+
+                <label for="region">Select Region:</label>
+                <select id="region">
+                    <option value="india">India</option>
+                </select>
+                <div class="button_sec">
+                    <button id="calculate">Calculate</button>
+                    <button id="reset">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="chart_parent">
+            <h1>Personal Finance Summary Graph</h1>
+            <div class="chart-container">
+                <canvas id="tax-chart"></canvas>
+            </div>
+
+            <div class="result">
+                <p id="result-text"></p>
+            </div>
+
+            <!-- <div id="meme-container" style="display: none;">
+            <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202402/budget-2024-memes-flooded-social-media-photo-priyankax-011102432-16x9_0.jpg" alt="">
+        </div> -->
+        </div>
+    </div>
+    <footer>&copy; Economix.com || ALL Rights Reserved</footer>
+    <script src="tax_calc.js"></script>
+</body>
+
+</html>
