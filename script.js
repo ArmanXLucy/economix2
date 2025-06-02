@@ -9,10 +9,10 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const db = new pg.Client({
-    user: "postgres",
-    host: "localhost",
+    user: "economix_user",
+    host: "dpg-d0ujkibe5dus739crksg-a",
     database: "economix",
-    password: "#Arman2005",
+    password: "hpUbpFg6CU4kQtAcms4KxMccqILVpJyM",
     port: 5432,
 })
 db.connect()
