@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>phone Signup</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .container {
+      position: relative;
+      width: 280px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      text-align: center;
+      padding: 40px;
+      background-color: white;
+    }
+    .title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .input {
+        border: 0.5px solid transparent;
+      width: 70%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      background-color:rgb(237, 237, 237);
+      color: #fff;
+      font-size: 1rem;
+      caret-color: black;
+      outline: none;
+    }
+    .button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background: red;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .button:hover {
+      transform: scale(1.1);
+    }
+    .login-link {
+      margin: 20px;
+      text-decoration: none;
+      display: block;
+      color: black;
+      transition: color 0.3s ease;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="title">Register</h2>
+    <input id="username" type="text" placeholder="Username" class="input">
+    <input id="email" type="email" placeholder="Email" class="input">
+    <input id="password" type="password" placeholder="Password" class="input">
+    <input id="confirm-password" type="password" placeholder="Confirm Password" class="input">
+    <a href="index.html" class="login-link">Already have an account? Login</a>
+    <button class="button">Register</button>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    document.querySelector(".button").addEventListener("click",(event)=>{
+      const input1 = document.getElementById('username').value.trim();
+      const input2 = document.getElementById('email').value.trim();
+      const input3 = document.getElementById('password').value.trim();
+      const input4 = document.getElementById('confirm-password').value.trim();
+      event.preventDefault();
+      if(!input1 || !input2 || !input3 || !input4){
+        alert("Please fill the box properly")
+        return;
+      }else{
+        location.href="./homepage.html"
+      }
+    })
+  </script>
+</body>
+</html>
